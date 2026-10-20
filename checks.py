@@ -1,6 +1,4 @@
 
-# Shubham Rajput
-# 24BCE0869
 # NetDoctor - Layer-by-Layer Network Diagnostics
 
 import platform

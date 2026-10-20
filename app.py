@@ -1,5 +1,3 @@
-# Shubham Rajput
-# 24BCE0869
 # NetDoctor - Layer-by-Layer Network Troubleshooting and Performance Analysis
 
 import html
@@ -683,3 +681,35 @@ else:
 
 st.divider()
 st.caption("NetDoctor is a point-in-time diagnostic aid. Results can be affected by VPNs, firewalls, ICMP filtering, DNS caching, target availability and current network conditions.")
+
+
+# Local installation guide for visitors who want diagnostics from their own device.
+st.divider()
+section("Run NetDoctor on Your Own Computer", "The hosted demo checks the cloud server. Run locally to inspect your own system and network.")
+with st.container(border=True):
+    st.markdown("### Want to see your own network details?")
+    st.write(
+        "Clone the public repository and launch NetDoctor on your computer. "
+        "Local diagnostics can report details such as your local IP address, default gateway, "
+        "and ping measurements when your operating system and network permit them."
+    )
+    st.link_button("Open NetDoctor on GitHub", "https://github.com/shubhamrajput74/NetDoctor", use_container_width=False)
+    st.markdown("**1. Clone the repository**")
+    st.code(
+        "git clone https://github.com/shubhamrajput74/NetDoctor.git\n"
+        "cd NetDoctor",
+        language="powershell",
+    )
+    st.markdown("**2. Create and activate a virtual environment (Windows PowerShell)**")
+    st.code(
+        "python -m venv .venv\n"
+        ".\\.venv\\Scripts\\Activate.ps1\n"
+        "pip install -r requirements.txt",
+        language="powershell",
+    )
+    st.markdown("**3. Start the dashboard**")
+    st.code("python -m streamlit run app.py", language="powershell")
+    st.caption(
+        "The dashboard opens in your browser, but the checks run on the computer where the command is launched. "
+        "Some results depend on your OS, permissions, firewall, VPN, and network configuration."
+    )
