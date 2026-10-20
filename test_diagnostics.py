@@ -1,6 +1,3 @@
-
-# Shubham Rajput
-# 24BCE0869
 # Safe simulated tests for NetDoctor
 
 import ast
