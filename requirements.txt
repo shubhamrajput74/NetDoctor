@@ -1,0 +1,5 @@
+streamlit
+psutil
+dnspython
+pandas
+plotly
